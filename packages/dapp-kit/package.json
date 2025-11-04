@@ -1,0 +1,31 @@
+{
+  "name": "@sodax/dapp-kit",
+  "version": "0.1.0",
+  "description": "SODAX Purple dApp Kit - React utilities with beautiful purple theming",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "checkTs": "tsc --noEmit",
+    "lint": "biome lint . --write",
+    "pretty": "biome format . --write"
+  },
+  "dependencies": {
+    "@sodax/types": "workspace:*",
+    "@sodax/sdk": "workspace:*",
+    "@sodax/wallet-sdk-react": "workspace:*",
+    "react": "catalog:"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/react": "catalog:",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "files": ["dist/**"]
+}
