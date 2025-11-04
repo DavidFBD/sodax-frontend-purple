@@ -1,0 +1,30 @@
+{
+  "name": "@sodax/types",
+  "version": "0.1.0",
+  "description": "TypeScript type definitions for SODAX Purple",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "checkTs": "tsc --noEmit",
+    "lint": "biome lint . --write",
+    "pretty": "biome format . --write"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "tsup": "catalog:",
+    "typescript": "catalog:"
+  },
+  "files": [
+    "dist/**"
+  ]
+}
